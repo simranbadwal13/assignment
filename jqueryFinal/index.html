@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Website Title & Description for Search Engine purposes -->
+	<title>Movies Search</title>
+	<!-- <meta name="description" content=""> -->
+	<meta charset="utf-8">
+	<!-- Mobile viewport optimized -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+	<!-- Bootstrap CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-glyphicons.css" rel="stylesheet">
+	
+	<!-- Custom CSS -->
+	<link href="css/stylesheet.css" rel="stylesheet">
+	
+	<!-- Include Modernizr in the head, before any other Javascript -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.8.1.min.js" integrity="sha256-/BhPlt0YeU4gTEEHWgCSO+fo5Wh0QjHXTy/fiSH3jSk=" crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+		
+		<div class="container-fluid">
+		    <div class="row">
+		        <div 
+		        class="col-md-6 col-md-offset-3">
+		            <h1>Movie Search</h1>
+		        </div>
+		    </div><!--end row div-->
+		    <div class="row">
+		        <div class="col-md-6 col-md-offset-3">
+		            
+			       	<label for="search" class="sr-only">Search</label>
+			        <input type="text" id="movieTitle" class="form-control" name="search" id="search" placeholder="Search">
+			        <button id="searchMovie" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-search form-control-feedback"></span>Search</button>
+		            	
+		        </div><!--end class div-->
+		    </div><!--end row div-->
+		    <div class="row">
+				<div class=".col-xs-12 .col-sm-6 .col-lg-8">
+			    	<h2 id=resultTag>RESULTS</h2>
+			    	<table class="table table-striped" class="table-responsive" id="results" border="4" boder-color="black">
+						<thead>
+							<tr>
+								<th>Poster</th>
+								<th>Title</th>
+								<th>Year</th>
+								<th>Type</th>
+							</tr>
+						</thead>
+						<tbody id="tableBody">
+							
+						</tbody>
+					</table>
+				</div><!--end table div -->
+			</div><!-- end row div-->
+		</div><!--end container div-->
+</body>
+</html>
