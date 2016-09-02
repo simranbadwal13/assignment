@@ -1,0 +1,15 @@
+[
+  '{{repeat(40000, 40000)}}',
+  {
+    _id: '{{objectId()}}',
+    index: '{{index()}}',
+    age: '{{integer(10, 20)}}',
+    name: '{{firstName()}} {{surname()}}',
+    gender: '{{gender()}}',
+    school: '{{"Hogwarts School of Witchcraft and Wizardry".toUpperCase()}}',
+    house: '{{random("Gryffindor lion", "Slytherin serpent", "Ravenclaw eagle" ,"Hufflepuff badger")}}',
+    email: '{{email()}}',
+    phone: '+91 {{phone()}}',
+    address: '{{integer(100, 999)}} {{street()}}, {{city()}}, {{state()}}, {{integer(100, 10000)}}'
+    }
+]

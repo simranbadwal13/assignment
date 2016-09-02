@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Website Title & Description for Search Engine purposes -->
+	<title>Student</title>
+	<!-- <meta name="description" content=""> -->
+	<meta charset="utf-8">
+	<!-- Mobile viewport optimized -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+	<!-- Bootstrap CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-glyphicons.css" rel="stylesheet">
+	
+	<!-- Custom CSS -->
+	<link href="css/stylesheet.css" rel="stylesheet">
+	
+	<!-- Include Modernizr in the head, before any other Javascript -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+  <div class="navbar navbar-default navbar-fixed-top">
+     <!-- <div class="container"> -->
+     <div class="container">
+        <a class="navbar-brand" href="/"><img src="images/logo.jpg" alt="Logo"></a>
+        <h1 id="StuSearch">Student Details</h1>
+        <h2>Custom search field</h2>
+        <div id="Search Input">
+           <div class="input-group col-md-12">
+               <input type="text" class="form-control input-lg" placeholder="Search by Name" id="search">
+               <span class="input-group-btn">
+                <button class="btn btn-info btn-lg" type="button" id="searchName">
+                    <i class="glyphicon glyphicon-search"></i>
+                </button>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="container" id="modal">
+
+    <button name="ViewAll" class="btn-success" id="viewAll">View All</button>
+    <button name="Add" class="btn-success" data-target="#iModal" data-toggle="modal">Add Student Details</button>
+
+</div>
+</div>
+
+
+
+<div class="container-fluid" id="no-more-tables" >
+ <div class="row">
+   <div class=".col-xs-12 .col-sm-6 .col-lg-8" id="btable">
+       <h2 id=resultTag>RESULTS</h2>
+       <table background="/images/back .jpg" class="col-md-12 table-bordered table-striped table-condensed cf" id="myTable" class="editableTable">
+           <thead class="cf">
+            <tr id="deleteRow">
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>School</th>
+                <th>House</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+
+        </tbody>
+    </table>
+</div><!--end table div -->
+</div><!-- end row div-->
+</div><!--end container div-->
+<div class="modal fade" id="iModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" data-dismiss="modal">&times;</button>
+                
+                <h4 class="modal-title">Add Details</h4>
+            </div><!--end modal-header -->
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="inputName">Name</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" id="inputName" placeholder="Name" required type="text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Gender</label>
+                        <div class="col-lg-10">
+                            <select id="inputGender">
+                                <option>male</option>
+                                <option>female</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" >Age</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" id="inputAge" pattern="[0-9]" required type="number" maxlength="2" minlength="2">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="inputMessage">House</label>
+                        <div class="col-lg-10">
+                            <select id="inputHouse">
+                                <option>Gryffindor lion</option>
+                                <option>Slytherin serpent</option>
+                                <option>Ravenclaw eagle</option>
+                                <option>Hufflepuff badger</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="inputNumber">Phone No.</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" id="inputPhone" required type="tel" pattern="[0-9]" maxlength="10" minlength="10">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="inputMessage">Address</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" id="inputAddress" placeholder="Address" required type="textarea">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                       <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+                       <button class="btn btn-success" type="submit"  id="submitButton">Submit</button>
+                       <button class="btn btn-success" type="submit"  id="saveButton">Save</button>
+                       <!-- <input type="submit" name=""> -->
+                   </div>
+
+               </form>
+           </div><!-- end modal-body -->
+       </div><!-- end modal-content -->
+   </div><!-- end modal-dialog -->
+</div><!-- end myModal -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+
+<script src="http://code.jquery.com/jquery.js"></script>
+
+<!-- If no online access, fallback to our hardcoded version of jQuery -->
+<script>window.jQuery || document.write('<script src="includes/js/jquery-1.9.1.min.js"><\/script>')</script>
+
+</div>
+</body>
+</html>
